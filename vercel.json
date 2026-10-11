@@ -10,6 +10,7 @@
     { "source": "/gallery", "destination": "/gallery/index.html" },
     { "source": "/event", "destination": "/event/index.html" },
     { "source": "/registration", "destination": "/registration/index.html" },
-    { "source": "/payment", "destination": "/payment/index.html" }
+    { "source": "/payment", "destination": "/payment/index.html" },
+    { "source": "/admin", "destination": "/admin/index.html" }
   ]
 }

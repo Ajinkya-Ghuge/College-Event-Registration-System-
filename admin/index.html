@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - IGNITE SA</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <img src="../Untitled66_20240112123845 1@3x.png" alt="Ignite SA">
+                <h2>IGNITE Admin</h2>
+            </div>
+            <nav class="admin-nav">
+                <a href="#dashboard" class="nav-item active" onclick="showSection('dashboard')">
+                    <span>📊</span> Dashboard
+                </a>
+                <a href="#events" class="nav-item" onclick="showSection('events')">
+                    <span>🎉</span> Events
+                </a>
+                <a href="#registrations" class="nav-item" onclick="showSection('registrations')">
+                    <span>📝</span> Registrations
+                </a>
+                <a href="#add-event" class="nav-item" onclick="showSection('add-event')">
+                    <span>➕</span> Add Event
+                </a>
+                <a href="#settings" class="nav-item" onclick="showSection('settings')">
+                    <span>⚙️</span> Settings
+                </a>
+                <a href="../landing/index.html" class="nav-item logout">
+                    <span>🚪</span> Logout
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <div class="header">
+                    <h1>Dashboard</h1>
+                    <p>Welcome back, Admin!</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🎉</div>
+                        <div class="stat-info">
+                            <h3 id="totalEvents">0</h3>
+                            <p>Total Events</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📝</div>
+                        <div class="stat-info">
+                            <h3 id="totalRegistrations">0</h3>
+                            <p>Total Registrations</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <h3 id="activeEvents">0</h3>
+                            <p>Active Events</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-info">
+                            <h3 id="totalRevenue">₹0</h3>
+                            <p>Total Revenue</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-section">
+                    <h2>Recent Registrations</h2>
+                    <div class="table-container">
+                        <table id="recentRegistrationsTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Event</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="5" class="no-data">No registrations yet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Events Section -->
+            <section id="events" class="content-section">
+                <div class="header">
+                    <h1>Manage Events</h1>
+                    <button class="btn-primary" onclick="showSection('add-event')">+ Add New Event</button>
+                </div>
+
+                <div class="events-grid" id="eventsGrid">
+                    <p class="no-data">No events created yet. Click "Add New Event" to get started!</p>
+                </div>
+            </section>
+
+            <!-- Add Event Section -->
+            <section id="add-event" class="content-section">
+                <div class="header">
+                    <h1>Add New Event</h1>
+                    <button class="btn-secondary" onclick="showSection('events')">← Back to Events</button>
+                </div>
+
+                <form id="addEventForm" class="event-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="eventName">Event Name *</label>
+                            <input type="text" id="eventName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventDate">Event Date *</label>
+                            <input type="date" id="eventDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventTime">Event Time *</label>
+                            <input type="time" id="eventTime" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventLocation">Location *</label>
+                            <input type="text" id="eventLocation" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="eventDescription">Description *</label>
+                            <textarea id="eventDescription" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventPrice">Price (₹) *</label>
+                            <input type="number" id="eventPrice" min="0" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventCapacity">Max Capacity *</label>
+                            <input type="number" id="eventCapacity" min="1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventCategory">Category *</label>
+                            <select id="eventCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="Workshop">Workshop</option>
+                                <option value="Seminar">Seminar</option>
+                                <option value="Competition">Competition</option>
+                                <option value="Cultural">Cultural</option>
+                                <option value="Technical">Technical</option>
+                                <option value="Sports">Sports</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventImage">Event Image URL</label>
+                            <input type="url" id="eventImage" placeholder="https://example.com/image.jpg">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Create Event</button>
+                        <button type="reset" class="btn-secondary">Reset Form</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Registrations Section -->
+            <section id="registrations" class="content-section">
+                <div class="header">
+                    <h1>All Registrations</h1>
+                    <button class="btn-primary" onclick="exportRegistrations()">📥 Export CSV</button>
+                </div>
+
+                <div class="filters">
+                    <input type="text" id="searchRegistrations" placeholder="Search by name or email...">
+                    <select id="filterEvent">
+                        <option value="">All Events</option>
+                    </select>
+                </div>
+
+                <div class="table-container">
+                    <table id="registrationsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Event</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="8" class="no-data">No registrations found</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="content-section">
+                <div class="header">
+                    <h1>Settings</h1>
+                </div>
+
+                <div class="settings-container">
+                    <div class="setting-card">
+                        <h3>Clear All Data</h3>
+                        <p>Remove all events and registrations from local storage</p>
+                        <button class="btn-danger" onclick="clearAllData()">Clear Data</button>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Export Backup</h3>
+                        <p>Download all data as JSON backup</p>
+                        <button class="btn-primary" onclick="exportBackup()">Export Backup</button>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Import Backup</h3>
+                        <p>Restore data from JSON backup file</p>
+                        <input type="file" id="importFile" accept=".json" style="display: none;">
+                        <button class="btn-secondary" onclick="document.getElementById('importFile').click()">Import Backup</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

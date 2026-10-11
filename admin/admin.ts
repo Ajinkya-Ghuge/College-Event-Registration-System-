@@ -1,0 +1,1 @@
+// TypeScript version for compilation
