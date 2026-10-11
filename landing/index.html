@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGNITE - Student Association</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../Untitled66_20240112123845 1@3x.png" alt="Ignite SA">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="../about/index.html">About us</a></li>
+                <li><a href="../event/index.html">Event</a></li>
+                <li><a href="../team/index.html">Team</a></li>
+                <li><a href="../gallery/index.html">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">IGNITE</h1>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="window.location.href='../event/index.html'">Explore Events</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='../about/index.html'">Know More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">About IGNITE</h2>
+                <p class="about-text">
+                    Ignite SA is a student community that boasts the most brilliant minds from our college. 
+                    Comprising individuals from diverse fields, including tech geeks, all members possess exceptional 
+                    skills in their respective domains and work in unison to make Ignite SA an exceptional entity.
+                </p>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🎯</div>
+                        <h3>Vision</h3>
+                        <p>To create a thriving ecosystem where students can explore, learn, and grow together.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🚀</div>
+                        <h3>Mission</h3>
+                        <p>Empowering students through innovative events, workshops, and collaborative projects.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h3>Community</h3>
+                        <p>Building a supportive network of passionate individuals dedicated to excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Preview Section -->
+        <section class="team-preview">
+            <div class="container">
+                <h2 class="section-title">Our Team</h2>
+                <p class="section-subtitle">Meet the passionate individuals driving IGNITE forward</p>
+                <div class="team-grid" id="teamGrid"></div>
+            </div>
+        </section>
+
+        <!-- Faculty Coordinators Section -->
+        <section class="faculty-section">
+            <div class="container">
+                <h2 class="section-title">Faculty Coordinators</h2>
+                <div class="faculty-grid" id="facultyGrid"></div>
+            </div>
+        </section>
+
+        <!-- Snapshots Section -->
+        <section class="snapshots-section">
+            <div class="container">
+                <h2 class="section-title">Snapshots</h2>
+                <div class="snapshots-grid" id="snapshotsGrid"></div>
+            </div>
+        </section>
+
+        <!-- Initiatives Section -->
+        <section class="initiatives-section">
+            <div class="container">
+                <h2 class="section-title">Our Initiatives</h2>
+                <div class="initiatives-grid" id="initiativesGrid"></div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p>ignitesa@mitmeerut.in</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Phone</h3>
+                            <p>+91 1234567890</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Location</h3>
+                            <p>MIT Engineering College<br>Moradabad Saharanpur Rd, Meerut</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link">📱</a>
+                            <a href="#" class="social-link">💼</a>
+                            <a href="#" class="social-link">📷</a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../Untitled66_20240112123845 1@3x.png" alt="Ignite SA" class="footer-logo">
+                    <h3 class="footer-brand">IGNITE<br><span>Student Association</span></h3>
+                    <p class="footer-description">
+                        Empowering students to lead, innovate, and evolve through impactful initiatives and collaborative growth.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../about/index.html">About Us</a></li>
+                        <li><a href="../event/index.html">Events</a></li>
+                        <li><a href="../team/index.html">Our Team</a></li>
+                        <li><a href="../gallery/index.html">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#announcements">Announcements</a></li>
+                        <li><a href="#feedback">Feedback</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><a href="mailto:ignitesa@mitmeerut.in">ignitesa@mitmeerut.in</a></li>
+                        <li><a href="tel:1234567890">1234567890</a></li>
+                        <li>MIT Engineering College<br>Moradabad Saharanpur Rd,<br>Meerut</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 IGNITE Student Association. All rights reserved.</p>
+                <p>Made with ❤️ by Ignite Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="landing.js"></script>
+</body>
+</html>

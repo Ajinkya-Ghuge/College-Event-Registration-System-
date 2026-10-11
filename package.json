@@ -1,0 +1,14 @@
+{
+  "name": "ignite-events-page",
+  "version": "1.0.0",
+  "description": "Event page for Ignite SA student community",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "python -m http.server 8000"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

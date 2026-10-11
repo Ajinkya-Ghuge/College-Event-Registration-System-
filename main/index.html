@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGNITE - Student Association</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../Untitled66_20240112123845 1@3x.png" alt="IGNITE Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="../landing/index.html" class="active">Home</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="../event/index.html">Event</a></li>
+                <li><a href="../team/index.html">Team</a></li>
+                <li><a href="../gallery/index.html">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">IGNITE</h1>
+            <div class="hero-buttons">
+                <a href="../event/index.html" class="btn btn-primary">Explore Events</a>
+                <a href="../about/index.html" class="btn btn-secondary">Know More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About IGNITE Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">About <span class="highlight">IGNITE</span></h2>
+            <p class="about-description">
+                IGNITE is a student association dedicated to fostering innovation, creativity, and technical excellence. 
+                We bring together passionate students to collaborate, learn, and create impactful projects that shape the future. 
+                Our community thrives on knowledge sharing, hands-on learning, and building connections that last a lifetime.
+            </p>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                        </svg>
+                    </div>
+                    <h3>Vision</h3>
+                    <p>To create a vibrant community of innovators and leaders who drive technological advancement.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3>Mission</h3>
+                    <p>Empower students through hands-on learning and collaborative projects.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Community</h3>
+                    <p>Building a supportive network where students grow together.</p>
+                </div>
+            </div>
+            
+            <a href="../about/index.html" class="btn btn-primary read-more-btn">Read More</a>
+        </div>
+    </section>
+
+    <!-- Team Preview Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title"><span class="highlight">Team</span></h2>
+            <p class="team-subtitle">Meet the passionate individuals driving IGNITE forward</p>
+            <div class="team-grid" id="teamGrid"></div>
+            <a href="../team/index.html" class="btn btn-primary read-more-btn">View Full Team</a>
+        </div>
+    </section>
+
+    <!-- Faculty Coordinators Section -->
+    <section class="faculty-section">
+        <div class="container">
+            <h2 class="section-title">Faculty <span class="highlight">Coordinators</span></h2>
+            <div class="faculty-grid" id="facultyGrid"></div>
+        </div>
+    </section>
+
+    <!-- Snapshots Section -->
+    <section class="snapshots-section">
+        <div class="container">
+            <h2 class="section-title"><span class="highlight">Snapshots</span></h2>
+            <div class="snapshots-grid" id="snapshotsGrid"></div>
+        </div>
+    </section>
+
+    <!-- OUR Initiatives Section -->
+    <section class="initiatives-section">
+        <div class="container">
+            <h2 class="section-title">OUR <span class="highlight">Initiatives</span></h2>
+            <div class="initiatives-grid" id="initiativesGrid"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-info-list">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>ignite@college.edu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+91 1234567890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>College Campus, City</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../Untitled66_20240112123845 1@3x.png" alt="IGNITE Logo" class="footer-logo">
+                    <div class="footer-brand">IGNITE</div>
+                    <p class="footer-description">
+                        Empowering students through innovation, collaboration, and technical excellence.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../main/index.html">Home</a></li>
+                        <li><a href="../about/index.html">About Us</a></li>
+                        <li><a href="../event/index.html">Events</a></li>
+                        <li><a href="../team/index.html">Team</a></li>
+                        <li><a href="../gallery/index.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="mailto:ignite@college.edu">ignite@college.edu</a></li>
+                        <li><a href="tel:+911234567890">+91 1234567890</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 IGNITE Student Association. All rights reserved.</p>
+                <p>Made with passion by the IGNITE team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

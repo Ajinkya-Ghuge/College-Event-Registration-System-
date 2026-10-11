@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Payment - Ignite SA</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../Untitled66_20240112123845 1@3x.png" alt="Ignite SA">
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about/index.html">About us</a></li>
+                <li><a href="../event/index.html" class="active">Event</a></li>
+                <li><a href="../team/index.html">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="../gallery/index.html">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="payment-section">
+            <div class="container">
+                <div class="payment-header">
+                    <h1>Complete <span class="highlight">Payment</span></h1>
+                    <p class="subtitle">You're almost there! Complete your payment to confirm your registration</p>
+                </div>
+
+                <div class="payment-container">
+                    <!-- Payment Method Section -->
+                    <div class="payment-method-section">
+                        <h2>Complete Payment Method</h2>
+                        
+                        <div class="payment-methods">
+                            <button class="payment-method-btn active" data-method="card">Card</button>
+                            <button class="payment-method-btn" data-method="upi">UPI</button>
+                            <button class="payment-method-btn" data-method="netbanking">Net Banking</button>
+                        </div>
+
+                        <!-- Card Payment Form -->
+                        <form class="payment-form active" id="cardForm" data-method="card">
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number <span class="required">*</span></label>
+                                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cardholderName">Cardholder Name <span class="required">*</span></label>
+                                <input type="text" id="cardholderName" name="cardholderName" placeholder="John Doe" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiryDate">Expiry Date <span class="required">*</span></label>
+                                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cvv">CVV <span class="required">*</span></label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" required>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="pay-btn">Pay Now</button>
+                        </form>
+
+                        <!-- UPI Payment Form -->
+                        <form class="payment-form" id="upiForm" data-method="upi">
+                            <div class="form-group">
+                                <label for="upiId">UPI ID <span class="required">*</span></label>
+                                <input type="text" id="upiId" name="upiId" placeholder="yourname@upi" required>
+                            </div>
+
+                            <div class="info-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                                </svg>
+                                <p>Enter your UPI ID and you'll receive a payment request on your UPI app.</p>
+                            </div>
+
+                            <button type="submit" class="pay-btn">Pay Now</button>
+                        </form>
+
+                        <!-- Net Banking Form -->
+                        <form class="payment-form" id="netbankingForm" data-method="netbanking">
+                            <div class="form-group">
+                                <label for="bankSelect">Select Bank <span class="required">*</span></label>
+                                <select id="bankSelect" name="bankSelect" required>
+                                    <option value="">Choose your bank</option>
+                                    <option value="sbi">State Bank of India</option>
+                                    <option value="hdfc">HDFC Bank</option>
+                                    <option value="icici">ICICI Bank</option>
+                                    <option value="axis">Axis Bank</option>
+                                    <option value="pnb">Punjab National Bank</option>
+                                    <option value="kotak">Kotak Mahindra Bank</option>
+                                    <option value="bob">Bank of Baroda</option>
+                                    <option value="canara">Canara Bank</option>
+                                    <option value="union">Union Bank of India</option>
+                                    <option value="idbi">IDBI Bank</option>
+                                </select>
+                            </div>
+
+                            <div class="info-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                                </svg>
+                                <p>You'll be redirected to your bank's website to complete the payment.</p>
+                            </div>
+
+                            <button type="submit" class="pay-btn">Pay Now</button>
+                        </form>
+                    </div>
+
+                    <!-- Order Summary Section -->
+                    <div class="order-summary">
+                        <h2>Order Summary</h2>
+                        
+                        <div class="summary-item highlight">
+                            <span class="label">Event</span>
+                            <span class="value" id="eventName">Tech Quiz Competition</span>
+                        </div>
+
+                        <div class="summary-item">
+                            <span class="label">Name</span>
+                            <span class="value" id="userName">-</span>
+                        </div>
+
+                        <div class="summary-item">
+                            <span class="label">College</span>
+                            <span class="value" id="userCollege">-</span>
+                        </div>
+
+                        <div class="summary-item">
+                            <span class="label">Team Size</span>
+                            <span class="value" id="teamSize">-</span>
+                        </div>
+
+                        <div class="summary-item">
+                            <span class="label">Event Fee</span>
+                            <span class="value">₹200</span>
+                        </div>
+
+                        <div class="summary-item">
+                            <span class="label">Processing Fee</span>
+                            <span class="value">₹20</span>
+                        </div>
+
+                        <div class="summary-item">
+                            <span class="label">GST (18%)</span>
+                            <span class="value">₹40</span>
+                        </div>
+
+                        <div class="summary-total">
+                            <span>Total Amount</span>
+                            <span class="amount">₹260</span>
+                        </div>
+
+                        <div class="security-notice">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                            </svg>
+                            <p>Your payment is secure and encrypted. You'll receive a confirmation email after successful payment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+            </div>
+            <h2>Payment Successful!</h2>
+            <p>Your registration has been confirmed. We've sent a confirmation email with all the event details.</p>
+            <button class="modal-btn" onclick="window.location.href='../index.html'">Back to Events</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../Untitled66_20240112123845 1@3x.pn
+g" alt="Ignite SA" class="footer-logo">
+                    <h3 class="footer-brand">IGNITE<br><span>Student Association</span></h3>
+                    <p class="footer-description">
+                        Empowering students to lead, innovate, and evolve through impactful events and collaborative growth.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><img src="whatsapp.svg" alt="WhatsApp"></a>
+                        <a href="#"><img src="linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#"><img src="instagram.svg" alt="Instagram"></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#announcements">Announcements</a></li>
+                        <li><a href="#feedback">Feedback</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><a href="mailto:ignitesa@mitmeerut.in">ignitesa@mitmeerut.in</a></li>
+                        <li><a href="tel:1234567890">1234567890</a></li>
+                        <li>MIT Engineering College<br>Moradabad Saharanpur Rd,<br>Meerut</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 IGNITE Student Association. All rights reserved.</p>
+                <p>Made with ❤️ by Ignite Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="payment.js"></script>
+</body>
+</html>

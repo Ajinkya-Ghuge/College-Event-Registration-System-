@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration - Ignite SA</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../Untitled66_20240112123845 1@3x.png" alt="Ignite SA">
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about/index.html">About us</a></li>
+                <li><a href="../event/index.html" class="active">Event</a></li>
+                <li><a href="../team/index.html">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="../gallery/index.html">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="registration-section">
+            <div class="container">
+                <div class="registration-header">
+                    <h1>Event <span class="highlight">Registration</span></h1>
+                    <p class="subtitle">Secure your spot at our upcoming events. Fill out the form below to register.</p>
+                </div>
+
+                <form class="registration-form" id="registrationForm">
+                    <div class="form-group full-width">
+                        <label for="event">Select Event<span class="required">*</span></label>
+                        <select id="event" name="event" required>
+                            <option value="">Choose an event</option>
+                            <option value="debate-competition">Debate Competition - 20 Feb 2025</option>
+                            <option value="tech-workshop">Tech Workshop - 21 Feb 2025</option>
+                            <option value="hackathon">Hackathon - 22 Feb 2025</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name<span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address<span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number<span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="college">College/University<span class="required">*</span></label>
+                            <input type="text" id="college" name="college" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="teamSize">Team Size (if applicable)</label>
+                        <input type="number" id="teamSize" name="teamSize" min="1" max="10">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="additionalInfo">Additional Info</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Register Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../Untitled66_20240112123845 1@3x.png" alt="Ignite SA" class="footer-logo">
+                    <h3 class="footer-brand">IGNITE<br><span>Student Association</span></h3>
+                    <p class="footer-description">
+                        Empowering students to lead, innovate, and evolve through impactful events and collaborative growth.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><img src="whatsapp.svg" alt="WhatsApp"></a>
+                        <a href="#"><img src="linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#"><img src="instagram.svg" alt="Instagram"></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#announcements">Announcements</a></li>
+                        <li><a href="#feedback">Feedback</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><a href="mailto:ignitesa@mitmeerut.in">ignitesa@mitmeerut.in</a></li>
+                        <li><a href="tel:1234567890">1234567890</a></li>
+                        <li>MIT Engineering College<br>Moradabad Saharanpur Rd,<br>Meerut</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 IGNITE Student Association. All rights reserved.</p>
+                <p>Made with ❤️ by Ignite Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="registration.js"></script>
+</body>
+</html>
