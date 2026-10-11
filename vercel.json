@@ -1,17 +1,15 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": ".",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    }
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/landing", "destination": "/landing/index.html" },
+    { "source": "/main", "destination": "/main/index.html" },
+    { "source": "/about", "destination": "/about/index.html" },
+    { "source": "/team", "destination": "/team/index.html" },
+    { "source": "/gallery", "destination": "/gallery/index.html" },
+    { "source": "/event", "destination": "/event/index.html" },
+    { "source": "/registration", "destination": "/registration/index.html" },
+    { "source": "/payment", "destination": "/payment/index.html" }
   ]
 }
